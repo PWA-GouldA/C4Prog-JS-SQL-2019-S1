@@ -12,7 +12,7 @@
     </a>
 </p>
 <p>
-    Find the demo files at <a href="https://github.com/PWA-GouldA/C4Prog-JS-SQL-2019-S1">
+    Find the demo files on GitHub at <a href="https://github.com/PWA-GouldA/C4Prog-JS-SQL-2019-S1">
         https://github.com/PWA-GouldA/C4Prog-JS-SQL-2019-S1
     </a>
 </p>
