@@ -12,8 +12,8 @@
     </a>
 </p>
 <p>
-    Find the demo files at <a href="https://github.com/">
-        https://www.github.com/
+    Find the demo files at <a href="https://github.com/PWA-GouldA/C4Prog-JS-SQL-2019-S1">
+        https://github.com/PWA-GouldA/C4Prog-JS-SQL-2019-S1
     </a>
 </p>
 <h3>Exercise 01</h3>
