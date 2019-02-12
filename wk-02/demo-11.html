@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo 10</title>
+</head>
+<body>
+<h1>Demo 11: JavaScript Beginnings</h1>
+
+<script language="JavaScript">
+    /* Loops */
+    /*    initialise     test        update */
+    for (let count = 1; count <= 5; count++) {
+        console.log(count);
+    }
+    console.log("---------------------------------");
+    let total = 0;
+    let count = 1;
+    for (count = 0; total < 100; count++) {
+        total += count;
+        console.log(count, total);
+    }
+    console.log("total: ", total)
+    console.log("---------------------------------");
+    total = 0;
+    for (count = 0; total < 100 && count < 10; count++) {
+        total += count;
+        console.log(count, total);
+    }
+    console.log("total: ", total)
+    console.log("---------------------------------");
+    total = 0;
+    for (count = 0; total < 100 || count < 10; count++) {
+        total += count;
+        console.log(count, total);
+    }
+    console.log("total: ", total)
+</script>
+</body>
+</html>
