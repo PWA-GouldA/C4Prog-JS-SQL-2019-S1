@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo 05</title>
+</head>
+<body>
+<h1>Demo 05: JavaScript Beginnings</h1>
+<p>Accepted abbreviation: JS</p>
+
+<!-- Including JS code directly in HTML page -->
+<script language="JavaScript">
+    /*
+        Author: Adrian Gould
+        Date:   2019/02/12
+
+        Simple JS script to demonstrate a calculation and comments
+     */
+    let aNumber = 34556;
+    let anotherNumber = 62.3;
+    let yetAnotherNumber = 77.8;
+    let result = 0; // define the result variable
+    result = aNumber * anotherNumber; // assign value of expression to result variable
+    /*
+        + - * / %
+        Remember order of preference ( )
+                                     / *
+                                     + -
+     */
+    roundResult = Math.round(yetAnotherNumber); // round to nearest
+    ceilResult = Math.ceil(yetAnotherNumber); // round up
+    floorResult = Math.floor(yetAnotherNumber); // round down
+
+    console.log(Math.abs(-5678));
+    console.log(Math.abs(5678));
+    console.log(result);
+    console.log(floorResult);
+    console.log(roundResult);
+    console.log(ceilResult);
+    console.log();
+    console.log(Math.floor(-1.5)); // rounds to -2
+    console.log(Math.floor(1.5)); // rounds to 1
+    console.log(Math.ceil(-1.5)); // rounds to -1
+    console.log(Math.ceil(1.5)); // rounds to 2
+    console.log(Math.round(-1.5)); // rounds to -1
+    console.log(Math.round(1.5)); // rounds to 2
+
+</script>
+<!-- CTRL+ALT+L reformat code -->
+</body>
+</html>
