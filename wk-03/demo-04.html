@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 03 - Demo 04</title>
+</head>
+<body>
+<h1>Week 03 - Demo 04</h1>
+
+<script>
+    let counter = 1;
+    let total = 0;
+    let value = 0;
+    while (counter <=4) {
+        // Do somethings
+        console.log("Count: ",counter);
+        value = prompt("Enter a number",0);
+        // update the "control variable"
+        counter++; // increment counter by 1
+        value = parseInt(value);
+        total += value; // add value to the total
+    } // end while
+    alert("Total: "+ total);
+
+</script>
+</body>
+</html>
