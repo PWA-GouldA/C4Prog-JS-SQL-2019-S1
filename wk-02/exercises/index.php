@@ -7,8 +7,8 @@
 <body>
 <h1>Exercises to Practice JS</h1>
 <p>
-    Find these at <a href="http://<?=$_SERVER['SERVER_NAME'];?>/AJG/Learning/wk-02/exercises.php">
-        <?= "http://".$_SERVER["SERVER_NAME"];?>/AJG/Learning/wk-02/exercises.php
+    Find these at <a href="http://<?=$_SERVER['SERVER_NAME'];?>/AJG//C4Prog-JS-SQL/wk-02/exercises.php">
+        <?= "http://".$_SERVER["SERVER_NAME"];?>/AJG//C4Prog-JS-SQL/wk-02/exercises.php
     </a>
 </p>
 <p>

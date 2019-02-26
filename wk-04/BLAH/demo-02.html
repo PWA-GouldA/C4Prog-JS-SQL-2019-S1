@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 04 - Demo 01</title>
+</head>
+<body>
+<h1>Week 04 - Demo 01</h1>
+<p>Forms in HTML</p>
+
+<form action="script-to-run.php" id="formName" method="get">
+
+    <div>
+        <h3>Text Box</h3>
+        <label for="textBoxName">Text Box Label</label>
+        <input type="text" id="textBoxName" name="textBoxName" placeholder="Enter text here">
+    </div>
+
+    <div>
+        <h3>Check Box</h3>
+        <label for="checkBoxName">Check Box Label</label>
+        <input type="checkbox" id="checkBoxName" name="checkBoxName">
+    </div>
+
+    <div>
+        <h3>Radio Button (Version 1)</h3>
+        <p>This version separates the label and input (radio) elements</p>
+        <ul>
+            <li><label for="radioButtonName1">Radio Button Label</label>
+                <input type="radio" id="radioButtonName1" name="radioButtonName"></li>
+            <li><label for="radioButtonName2">Radio Button Label</label>
+                <input type="radio" id="radioButtonName2" name="radioButtonName"></li>
+            <li><label for="radioButtonName3">Radio Button Label</label>
+                <input type="radio" id="radioButtonName3" name="radioButtonName"></li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Radio Button (Version 2)</h3>
+        <p>This version wraps the input in the label element</p>
+        <ul>
+            <li>
+                <label>Radio 1
+                    <input type="radio"  name="radioButtonV2Name">
+                </label>
+            </li>
+            <li>
+                <label>Radio 2
+                    <input type="radio"  name="radioButtonV2Name">
+                </label>
+            </li>
+            <li>
+                <label>Radio 3
+                    <input type="radio"  name="radioButtonV2Name">
+                </label>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Email Text Box</h3>
+        <label for="eMailTextBoxName">Text Box (eMail) Label</label>
+        <input type="email" id="eMailTextBoxName" name="eMailTextBoxName" placeholder="Enter eMail Address here">
+    </div>
+
+    <div>
+        <h3>Password Text Box</h3>
+        <label for="passwordTextBoxName">Password Text Box Label</label>
+        <input type="password" id="passwordTextBoxName" name="passwordTextBoxName" placeholder="Enter Password here">
+    </div>
+
+    <div>
+        <h3>Number Text Box</h3>
+        <label for="numberTextBoxName">Number Text Box Label</label>
+        <input type="number" id="numberTextBoxName" name="numberTextBoxName" placeholder="Enter number here">
+    </div>
+
+    <div>
+        <h3>Text Area</h3>
+        <label for="textareaName">Number Text Box Label</label>
+        <textarea  id="textareaName" name="textareaName" placeholder="Enter text here"></textarea>
+    </div>
+
+    <div>
+        <h3>Drop-Down Lists</h3>
+        <label for="dropdownName">Dropdown List Label</label>
+        <select id="dropdownName" name="dropdownName">
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </select>
+    </div>
+
+
+    <div>
+        <label for="hiddenFieldName">Hidden Form Field (not needed)</label>
+        <input type="hidden" id="hiddenFieldName" name="hiddenFieldName" value="This Is A Hidden Value">
+    </div>
+
+
+    <div>
+        <label for="buttonName">Button Label (not usually needed)</label>
+        <button id="buttonName" name="buttonName" value="optional value">Button Text</button>
+    </div>
+
+    <div>
+        <label for="submitButton">Submit Button (not usually needed)</label>
+        <button type="submit" id="submitButton" name="submitButton" value="optional submit value">Submit</button>
+    </div>
+
+    <div>
+        <label for="resetButton">Submit Button (not usually needed)</label>
+        <button type="reset" id="resetButton" name="resetButton" value="optional reset value">Reset</button>
+    </div>
+
+</form>
+
+</body>
+</html>
