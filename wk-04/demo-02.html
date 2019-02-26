@@ -49,13 +49,208 @@
         -->
         <form action="demo-02.html" id="formID" name="formName" method="post">
 
+            <!-- control group (Text Box) -->
             <div class="form-group">
-                <label for="txtID">Text Box:</label>
-                <input type="text" id="txtID" name="txtName" class="form-control"/>
+                <h4>Text Box Form Field</h4>
+                <label for="idText">Text Box:</label>
+                <input type="text"
+                       id="idText"
+                       name="txtName"
+                       placeholder="Enter Text Here"
+                       class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <h4>eMail Form Field</h4>
+                <label for="idEmail">eMail Label:</label>
+                <input type="email"
+                       id="idEmail"
+                       name="txtEmail"
+                       placeholder="Enter eMail Address here"
+                       class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <h4>Password Form Field</h4>
+                <label for="idPassword">
+                    Password Text Box Label:
+                </label>
+                <input type="password"
+                       id="idPassword"
+                       name="txtPassword"
+                       placeholder="Enter Password here"
+                       class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <h4>Number Form Field</h4>
+                <label for="idNumber">
+                    Number Text Box Label:
+                </label>
+                <input type="number"
+                       id="idNumber"
+                       name="txtNumber"
+                       placeholder="Enter number here"
+                       class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <h3>Text Area Field</h3>
+                <label for="idTextArea">
+                    Text Area Field Label:
+                </label>
+                <textarea
+                        id="idTextArea"
+                        name="txtTextArea"
+                        placeholder="Enter text here"
+                        class="form-control"></textarea>
+            </div>
+
+            <div class="form-group">
+                <h4>Drop-Down Lists</h4>
+                <label for="idDropDown">Dropdown Label:</label>
+                <select id="idDropDown"
+                        name="dropdownName"
+                        class="form-control">
+                    <optgroup label="Summer">
+                        <option>January</option>
+                        <option>February</option>
+                    </optgroup>
+                    <optgroup label="Autumn">
+                        <option selected>April</option>
+                        <option disabled>May</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Hidden Field Example</h4>
+                <input type="hidden"
+                       id="idHidden" name="hiddenField"
+                       value="This Is A Hidden Value">
+            </div>
+
+            <div class="form-group">
+                <h4>Check Box</h4>
+                <label for="idCheck">Check Box Label</label>
+                <input type="checkbox"
+                       checked
+                       id="idCheck" name="checkName">
+            </div>
+
+            <div class="form-group">
+                <h4>Check Box (Label after)</h4>
+                <input type="checkbox"
+                       id="idCheck2" name="checkName2">
+                <label for="idCheck2">Check Box Label</label>
+            </div>
+
+            <div class="form-group">
+                <h4>Radio Button (Version 1)</h4>
+                <p>This version separates the label and input (radio) elements</p>
+                <!-- make sure the radio buttons have
+                     the same name! -->
+                <ul class="list-unstyled">
+                    <li>
+                        <label for="idRadio1">
+                            Radio Label 1</label>
+                        <input type="radio"
+                               id="idRadio1"
+                               name="radioName"
+                               value="Radio 1 Value" />
+                    </li>
+                    <li>
+                        <label for="idRadio2">
+                            Radio Label 2</label>
+                        <input type="radio"
+                               id="idRadio2"
+                               name="radioName"
+                               checked
+                               value="Radio 2 Value" >
+                    </li>
+                    <li>
+                        <label for="idRadio3">
+                            Radio Label 3</label>
+                        <input type="radio"
+                               id="idRadio3"
+                               name="radioName"
+                               value="Radio 3 Value" >
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Radio Button (Version 2)</h4>
+                <p>This version wraps the input in the label element</p>
+                <ul class="list-unstyled">
+                    <li>
+                        <label>Radio 1
+                            <input type="radio"
+                                   name="radioV2"
+                                   value="Radio 1">
+                        </label>
+                    </li>
+                    <li>
+                        <label>Radio 2
+                            <input type="radio"
+                                   name="radioV2"
+                                   value="Radio 2">
+                        </label>
+                    </li>
+                    <li>
+                        <label>Radio 3
+                            <input type="radio"
+                                   name="radioV2"
+                                   value="Radio 3">
+                        </label>
+                    </li>
+                </ul>
             </div>
 
 
+            <div class="form-group">
+                <h4>Button (Unstyled)</h4>
+                <button id="idButton"
+                        name="buttonName"
+                        value="optional value">
+                    Button Text
+                </button>
+            </div>
+
+            <div class="form-group">
+                <h4>Button (dark)</h4>
+                <button id="idButton"
+                        name="buttonName"
+                        value="optional value"
+                        class="btn btn-dark">
+                    Button Text
+                </button>
+            </div>
+
+            <div class="form-group">
+                <h4>Submit Button</h4>
+                <button type="submit"
+                        id="idSubmit"
+                        name="submitButton"
+                        value="optional submit value"
+                        class="btn btn-success">
+                    Submit
+                </button>
+            </div>
+
+            <div class="form-group">
+                <h4>Reset/Clear Button</h4>
+                <button type="reset"
+                        id="idReset"
+                        name="resetButton"
+                        value="optional reset value"
+                        class="btn btn-danger">
+                    Reset
+                </button>
+            </div>
+
         </form>
+
     </div>
 </main>
 
@@ -72,7 +267,7 @@
 <script src="../assets/js/jquery/jquery-3.3.1.min.js"></script>
 <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 
-<script src="./js/demo-01.js"></script>
+<script src="./js/demo-02.js"></script>
 
 </body>
 </html>
