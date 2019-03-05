@@ -9,7 +9,7 @@
     <!-- Cert 4 Programming Specific Stylesheet -->
     <link rel="stylesheet" href="../assets/css/c4prog.css">
 
-    <title>Week 05 - Demo 05</title>
+    <title>Week 05 - Demo 06</title>
 
 </head>
 <body class="d-flex flex-column h-100">
@@ -32,33 +32,28 @@
         <!-- Details about this demo file -->
         <div class="row">
             <div class="col">
-                <h1 class="mt-4">Week 05 - Demo 05</h1>
+                <h1 class="mt-4">Week 05 - Demo 06</h1>
                 <h2 class="text-muted">Working with Form Fields</h2>
                 <p class="lead">Accessing a form and getting data from a field.</p>
             </div>
         </div>
         <!-- begin demo HTML code -->
         <form action="#" method="post">
-            <!--
-            div.form-group>label[for=givenName]{Given Name}+input#givenName.form-control[placeholder="Given name",name=givenName]
-                -->
             <div class="form-group">
-                <label for="givenName">Given Name</label>
-                <input type="text" id="givenName" class="form-control" placeholder="Given name" name="givenName">
+                <label for="product">Product</label>
+                <select name="product" id="product">
+                    <optgroup label="Fruit">
+                        <option value="Cherries">Cherries</option>
+                        <option value="Bananas">Bananas</option>
+                        <option value="Apples">Apples</option>
+                    </optgroup>
+                    <optgroup label="Veg">
+                        <option value="Zucchini">Zucchini</option>
+                        <option value="Potatoes">Potatoes</option>
+                        <option value="Carrots">Carrots</option>
+                    </optgroup>
+                </select>
             </div>
-
-            <!-- add Family Name and eMail address to this form -->
-
-            <div class="form-group">
-                <label for="familyName">Family Name</label>
-                <input type="text" id="familyName" class="form-control" placeholder="Family name" name="familyName">
-            </div>
-
-            <div class="form-group">
-                <label for="eMail">eMail</label>
-                <input type="text" id="eMail" class="form-control" placeholder="eMail" name="eMail">
-            </div>
-
 
             <div class="form-group">
                 <button type="submit" class="btn btn-dark" name="submit" id="submit">
@@ -69,21 +64,11 @@
         <hr>
         <h3>Results</h3>
         <div class="row">
-            <p class="col-3">Given Name:</p>
-            <p class="col-9" id="resultGiven">&hellip;</p>
+            <p class="col-3">Product:</p>
+            <p class="col-9" id="productChosen">&hellip;</p>
         </div>
 
         <!-- add two more output areas, one for family the other for email -->
-
-        <div class="row">
-            <p class="col-3">Family Name:</p>
-            <p class="col-9" id="resultFamily">&hellip;</p>
-        </div>
-
-        <div class="row">
-            <p class="col-3">eMail:</p>
-            <p class="col-9" id="resultEMail">&hellip;</p>
-        </div>
 
         <!-- end demo HTML code -->
     </div>
@@ -111,7 +96,7 @@
 <script src="../assets/js/jquery/jquery-3.3.1.min.js"></script>
 <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 
-<script src="./js/demo-05.js"></script>
+<script src="./js/demo-06.js"></script>
 
 </body>
 </html>

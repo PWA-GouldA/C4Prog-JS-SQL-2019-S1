@@ -19,6 +19,9 @@ form.addEventListener("submit", function(event) {
     doc.getElementById('resultGiven').innerText=form.elements.givenName.value;
 
     // add JS for displaying the family and email addresses on the page
+    doc.getElementById('resultFamily').innerText=form.elements.familyName.value;
+
+    doc.getElementById('resultEMail').innerText=form.elements.eMail.value;
 
     event.preventDefault();
 });
