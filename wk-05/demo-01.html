@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../assets/css/c4prog.css"/>
 
 
-    <title>Week 05 - Demo 00</title>
+    <title>Week 05 - Demo 01</title>
 
 </head>
 <body class="d-flex flex-column h-100">
@@ -33,14 +33,23 @@
         <!-- Details about this demo file -->
         <div class="row">
             <div class="col">
-                <h1 class="mt-4">Week 05 - Demo 00</h1>
-                <h2 class="text-muted">Demo Name</h2>
-                <p class="lead">Summary of the Demo</p>
-                <p>Explanatory paragraph, if required.</p>
+                <h1 class="mt-4">Week 05 - Demo 01</h1>
+                <h2 class="text-muted">Finding targets in the DOM</h2>
+                <p class="lead">Using the Document Object Model (DOM) to help us find the left and right targets</p>
+                <p>We use the <code>getElementById</code> method to locate the <code>leftTarget</code> and
+                    <code>rightTarget</code> IDs.</p>
             </div>
         </div>
-        <!-- begin demo HTML code -->
 
+        <!-- begin demo HTML code -->
+        <div class="row">
+            <div class="col bg-info m-2 p-2 text-dark" id="leftTarget">
+                Left Column
+            </div>
+            <div class="col bg-secondary m-2 p-2 text-light" id="rightTarget">
+                Right Column
+            </div>
+        </div>
 
         <!-- end demo HTML code -->
     </div>
@@ -68,7 +77,7 @@
 <script src="../assets/js/jquery/jquery-3.3.1.min.js"></script>
 <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 
-<script src="./js/demo-02.js"></script>
+<script src="./js/demo-01.js"></script>
 
 </body>
 </html>
