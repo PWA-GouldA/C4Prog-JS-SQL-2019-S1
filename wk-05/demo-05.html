@@ -46,12 +46,24 @@
                 <label for="givenName">Given Name</label>
                 <input type="text" id="givenName" class="form-control" placeholder="Given name" name="givenName">
             </div>
+
+            <!-- add Family Name and eMail address to this form -->
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-dark" name="submit" id="submit">
+                    Save
+                </button>
+            </div>
         </form>
+        <hr>
         <h3>Results</h3>
         <div class="row">
             <p class="col-3">Given Name:</p>
-            <p class="col-9">&hellip;</p>
+            <p class="col-9" id="resultGiven">&hellip;</p>
         </div>
+
+        <!-- add two more output areas, one for family the other for email -->
+
         <!-- end demo HTML code -->
     </div>
 </main>

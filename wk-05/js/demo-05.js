@@ -8,6 +8,17 @@
  */
 
 let doc = document;
+var form = doc.querySelector("form");
 let givenName = doc.getElementById('givenName');
 
+console.log(form);
 
+form.addEventListener("submit", function(event) {
+    console.log("Saving value", form.elements.givenName.value);
+
+    doc.getElementById('resultGiven').innerText=form.elements.givenName.value;
+
+    // add JS for displaying the family and email addresses on the page
+
+    event.preventDefault();
+});
