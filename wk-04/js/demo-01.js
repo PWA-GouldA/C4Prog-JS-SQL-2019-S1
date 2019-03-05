@@ -1,7 +1,7 @@
 /**
  * Javascript Week 04 - Demo 01
  *
- * Filename: js/demo-01.js
+ * Filename: js/demo-01a.js
  * Author:   Adrian Gould
  * Date:     2019-02-26
  *
