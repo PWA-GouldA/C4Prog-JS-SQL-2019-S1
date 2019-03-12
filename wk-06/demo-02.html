@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../assets/js/c4prog.css"/>
 
 
-    <title>Week 06 - Demo 00</title>
+    <title>Week 06 - Demo 02</title>
 
 </head>
 <body class="d-flex flex-column h-100">
@@ -31,13 +31,48 @@
     <div class="container">
 
         <!-- Details about this demo file -->
-        <h1 class="mt-4">Week 06 - Demo 00</h1>
-        <h2 class="text-muted">Demo Name</h2>
-        <p class="lead">Summary of the Demo</p>
-        <p>Explanatory paragraph, if required.</p>
+        <h1 class="mt-4">Week 06 - Demo 02</h1>
+        <h2 class="text-muted">Demo Forms and Results</h2>
+        <p class="lead">Use bootstrap to lay out forms and results</p>
+
         <!-- begin demo HTML code -->
+        <!-- form layout -->
+        <form action="#" name="formDemo" method="post">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text"
+                       id="firstName"
+                       name="firstName"
+                       class="form-control"
+                       placeholder="Enter given name">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text"
+                       id="lastName"
+                       name="lastName"
+                       class="form-control"
+                       placeholder="Enter surname">
+            </div>
+            <button type="submit" name="save" class="btn btn-primary">Save</button>
+        </form>
 
-
+        <!-- result layout -->
+        <section class="row">
+            <header class="col-12">
+                <h3>Results</h3>
+            </header>
+            <div class="col-12">
+                <div class="row">
+                    <p class="col-3 text-muted">First Name:</p>
+                    <p class="col-9 text-danger" id="resultFirstName">n/a</p>
+                </div>
+                <div class="row">
+                    <p class="col-3 text-muted">Surname:</p>
+                    <p class="col-9 text-danger" id="resultSurname">n/a</p>
+                </div>
+            </div>
+        </section>
         <!-- end demo HTML code -->
     </div>
 </main>
@@ -64,7 +99,7 @@
 <script src="../assets/js/jquery/jquery-3.3.1.min.js"></script>
 <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 
-<script src="./js/demo-00.js"></script>
+<script src="./js/demo-02.js"></script>
 
 </body>
 </html>
