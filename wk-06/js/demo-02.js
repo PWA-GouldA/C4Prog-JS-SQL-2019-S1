@@ -43,8 +43,18 @@ formDemo.addEventListener('submit', function (event) {
     // put surname into the surname results area
     // Check to see if the second name has content
     // if not display error message!
-    secondResult.innerText = lastName;
 
+    // check to see if the last name has been entered
+    if (!isEmpty(lastName)) {
+        // put last name into the last name results area
+        secondResult.innerText = lastName;
+        // Hide the error message
+        lastError.classList.add('d-none');
+    } else {
+        // Change and display the error message
+        lastError.innerText = "You must enter a last name";
+        lastError.classList.remove('d-none')
+    }
 }); // end event listener
 
 /**
@@ -65,7 +75,7 @@ function isEmpty(fieldName) {
  * @param minLength
  */
 function isMinLength(fieldName, minLength = 0) {
-    if (length(fieldName.value) < minLength) {
+    if (fieldName.length < minLength) {
         return true;
     }
     return false;
@@ -77,7 +87,7 @@ function isMinLength(fieldName, minLength = 0) {
  * @param maxLength
  */
 function isMaxLength(fieldName, maxLength = 255) {
-    if (length(fieldName.value) > maxLength) {
+    if (fieldName.length > maxLength) {
         return true;
     }
     return false;
