@@ -45,7 +45,9 @@
                        name="firstName"
                        class="form-control"
                        placeholder="Enter given name">
+                <span id="firstNameError" class="text-danger d-none">The Error (Not Shown by default)</span>
             </div>
+
             <div class="form-group">
                 <label for="lastName">Last Name</label>
                 <input type="text"
@@ -53,6 +55,7 @@
                        name="lastName"
                        class="form-control"
                        placeholder="Enter surname">
+                <span id="lastNameError" class="text-danger d-none">The Error (Not Shown by default)</span>
             </div>
             <button type="submit" name="save" class="btn btn-primary">Save</button>
         </form>
