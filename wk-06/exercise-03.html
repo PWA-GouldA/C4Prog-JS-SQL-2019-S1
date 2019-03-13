@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- Bootstrap CSS file included -->
+    <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css"/>
+    <!-- Cert 4 Programming Specific Stylesheet -->
+    <link rel="stylesheet" href="../assets/js/c4prog.css"/>
+
+
+    <title>Week 06 - Exercise 03</title>
+
+</head>
+<body class="d-flex flex-column h-100">
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="./">Week 06</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- no menu items shown in this example -->
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+    <div class="container">
+
+        <!-- Details about this demo file -->
+        <h1 class="mt-4">Week 06 - Exercise 03</h1>
+        <h2 class="text-muted">Simple Grocery Store</h2>
+        <p class="lead">Practice manipulating the DOM</p>
+
+        <h2>Problem to solve</h2>
+        <p class="lead">This exercise builds on Week 05's exercise 3.</p>
+        <p>Create a JavaScript script that:</p>
+
+        <ol>
+            <li>Asks the user to select a fruit or vegetable from a drop down (select) box with the options fruit
+                (apple, cherry, banana, orange, date, kiwi fruit, pear, peach, apricot) and vegetables (potato,
+                beetroot, carrot, turnip, swede, celery, fennel)</li>
+            <li>Asks the user for the price of the fruit/vegetable per kilogram</li>
+            <li>Asks the user for the quantity (kilograms) of the fruit/vegetable</li>
+            <li>Calculates the total cost of the fruit/vegetable (price per kilogram times quantity of
+                fruit/vegetable)</li>
+            <li>Displays the fruit/vegetable name, the price, the quantity and total cost</li>
+        </ol>
+        <p>When the user makes an error the page needs to prompt them to correct it. The page must check for the
+            following errors and display them to the user:</p>
+        <ol>
+            <li>Name of Fruit/Vegetable: if the name is not entered, then prompt the user to select a fruit or
+                vegetable</li>
+            <li>Price per Kilogram: if the user enters a price that is less than 0 then they are told to enter a
+                positive number for the price per kilogram.</li>
+            <li>Price per Kilogram: if the user enters a price that is greater than $250 then they are told to enter a
+                price that is less than $250 per kilogram.</li>
+            <li>Quantity: if the user enters a quantity that is less than 0 then they are told to enter a value
+                that is greater than 0.</li>
+            <li>Quantity: if the user enters a quantity that is greater than 1000 then they are told to enter a value
+                that is less than 1000.</li>
+        </ol>
+        <p>When an error is encountered, the results are should be blanked out.</p>
+
+        <p>Make the output similar to this:</p>
+        <!-- begin exercise HTML code -->
+        <!-- add form HTML here -->
+
+        <!-- add results HTML here-->
+        <ul class="list-unstyled">
+            <li class="row">
+                <span class="col-2">Product:</span>
+                <span class="col-5">PRODUCT NAME</span>
+            </li>
+            <li class="row">
+                <span class="col-2">Price/Kg:</span>
+                <span class="col-5">PRICE</span>
+            </li>
+            <li class="row">
+                <span class="col-2">Quantity (Kg):</span>
+                <span class="col-5">QUANTITY</span>
+            </li>
+            <li class="row border-top border-dark mt-2 pt-1">
+                <span class="col-2">Total: $</span>
+                <span class="col-5">TOTAL</span>
+            </li>
+        </ul>
+
+
+        <!-- end exercise HTML code -->
+
+        <hr>
+        <p>You can see these exercises in class from
+            <a  href="http://a106-20/AJG/C4Prog-JS-SQL/wk-05/">
+                <code>http://a106-20/AJG/C4Prog-JS-SQL/wk-05/</code>
+            </a> and also on GitHuB at
+            <a href="https://github.com/PWA-GouldA/C4Prog-JS-SQL-2019-S1">
+                <code>https://github.com/PWA-GouldA/C4Prog-JS-SQL-2019-S1</code>
+            </a>.
+        </p>
+
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-danger text-white">
+    <div class="container">
+        <div class="row">
+            <p class="text-white col">This page created by: Adrian Gould</p>
+            <p class="col">
+                Made with
+                <a href="https://getbootstrap.com"
+                   target="_blank" class="text-white">
+                    Bootstrap</a> |
+                <a href="https://hackerthemes.com/bootstrap-cheatsheet/"
+                   target="_blank" class="text-white">
+                    Bootstrap Cheat Sheet</a>
+            </p>
+            <p class="text-white-50 col text-right">Last Updated: 2019-03-11</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript Includes - External JS code -->
+<script src="../assets/js/jquery/jquery-3.3.1.min.js"></script>
+<script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+<script src="./js/exercise-03.js"></script>
+
+</body>
+</html>
