@@ -19,6 +19,9 @@ theForm.addEventListener('submit', function (event) {
     if (isEmpty(givenName)) {
         givenNameError.innerHTML = '<p class="text-danger">Please enter a given name.</p>';
         event.preventDefault();
+    } else if (isTooLong(givenName, 50)) {
+        givenNameError.innerHTML = '<p class="text-danger">The given name is too long.</p>';
+        event.preventDefault();
     }
 
     // all ok, so submit will happen
@@ -32,3 +35,6 @@ function isEmpty(data) {
     return data > '' ? false : true;
 }
 
+function isTooLong(data, maxLength) {
+    return data.length>maxLength?true:false;
+}
