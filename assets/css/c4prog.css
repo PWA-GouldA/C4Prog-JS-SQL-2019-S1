@@ -10,3 +10,5 @@ main > .container {
     padding-right: 15px;
     padding-left: 15px;
 }
+
+#mapid { height: 240px; }
