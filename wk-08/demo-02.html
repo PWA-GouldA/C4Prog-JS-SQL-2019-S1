@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- Bootstrap CSS file included -->
+    <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css"/>
+    <!-- Cert 4 Programming Specific Stylesheet -->
+    <link rel="stylesheet" href="../assets/js/c4prog.css"/>
+
+
+    <title>Week 08 - Demo 02</title>
+
+</head>
+<body class="d-flex flex-column h-100">
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="./">Week 08</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- no menu items shown in this example -->
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+    <div class="container">
+
+        <!-- Details about this demo file -->
+        <h1 class="mt-4">Week 08 - Demo 02</h1>
+        <h2 class="text-muted">Form Components</h2>
+        <p class="lead">This is a page of Bootstrap 4 pre-formatted form components that you may find useful.</p>
+        <!-- begin demo HTML code -->
+
+        <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+        <form action="" id="demoForm" name="demoForm" method="post">
+            <h5 class="mt-3 border-top border-top border-info">Text Box</h5>
+            <div class="form-group">
+                <label for="givenName">
+                    Given Name
+                </label>
+                <input type="text"
+                       id="givenName"
+                       name="givenName"
+                       class="form-control"
+                       placeholder="Enter given name"/>
+                <div id="givenNameError"></div>
+            </div>
+
+            <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+            <h5 class="mt-3 border-top border-top border-info">Password Box</h5>
+            <div class="form-group">
+                <label for="password">
+                    Password
+                </label>
+                <input type="password"
+                       id="password"
+                       name="password"
+                       class="form-control"
+                       placeholder="Enter Password"/>
+                <div id="passwordError"></div>
+            </div>
+
+            <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+            <h5 class="mt-3 border-top border-top border-info">Password Verify Box</h5>
+            <div class="form-group">
+                <label for="passwordVerify">
+                    Verify Password
+                </label>
+                <input type="password"
+                       id="passwordVerify"
+                       name="passwordVerify"
+                       class="form-control"
+                       placeholder="Enter Password Again"/>
+                <div id="passwordVerifyError"></div>
+            </div>
+
+            <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+            <h5 class="mt-3 border-top border-top border-info">eMail</h5>
+            <div class="form-group">
+                <label for="email">
+                    eMail
+                </label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       class="form-control"
+                       placeholder="Enter eMail Address"/>
+                <div id="emailError"></div>
+            </div>
+
+            <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+            <h5 class="mt-3 border-top border-top border-info">Text Area</h5>
+            <div class="form-group">
+                <label for="textArea">Please enter your message</label>
+                <textarea class="form-control" id="textArea" name="textArea" rows="3"
+                          placeholder="Your message"></textarea>
+            </div>
+
+            <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+            <h5 class="mt-3 border-top border-top border-info">Radio Button Group</h5>
+            <fieldset class="form-group" id="genderGroup">
+                <p class="mt-3">Gender</p>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="gender" id="genderM" value="M">
+                    <label for="genderM" class="form-check-label">Male</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="gender" id="genderF" value="F">
+                    <label for="genderF" class="form-check-label">Female</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="gender" id="genderX" value="X">
+                    <label for="genderX" class="form-check-label">Other</label>
+                </div>
+            </fieldset>
+
+            <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+            <h5 class="mt-3 border-top border-top border-info">Check Box</h5>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="infoCheckBoxes" id="accept" value="accept">
+                <label for="accept" class="form-check-label">I agree to the terms and conditions of use of
+                    this web application.</label>
+            </div>
+
+            <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+            <h5 class="mt-3 border-top border-top border-info">Select Box</h5>
+            <div class="form-group">
+                <label for="selectBox">Select Protein</label>
+                <select class="form-control" id="selectBox" name="selectBox">
+                    <option>Beef</option>
+                    <option>Chicken</option>
+                    <option>Tofu</option>
+                    <option>Nuts</option>
+                    <option>Pork</option>
+                    <option>Fish</option>
+                    <option>Shell Fish</option>
+                </select>
+            </div>
+
+            <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+            <h5 class="mt-3 border-top border-top border-info">Multiple Select Box</h5>
+            <div class="form-group">
+                <label for="selectBox">Select Fruit</label>
+                <select multiple class="form-control" id="selectBox" name="selectBox">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+
+            <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+            <h5 class="mt-3 border-top border-top border-info">Buttons</h5>
+
+            <p class="mt-3">Submit</p>
+            <button type="submit" class="btn btn-outline-secondary">Submit</button>
+
+            <p class="mt-3">Reset</p>
+            <button type="reset" class="btn btn-outline-secondary">Reset</button>
+
+            <p class="mt-3">Button</p>
+            <button type="button" class="btn btn-outline-secondary">Button</button>
+
+            <p class="mt-3">Colours</p>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-dark">Dark</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-link">Link</button>
+
+            <p class="mt-3">Outlines</p>
+            <button type="button" class="btn btn-outline-primary">Primary</button>
+            <button type="button" class="btn btn-outline-secondary">Secondary</button>
+            <button type="button" class="btn btn-outline-info">Info</button>
+            <button type="button" class="btn btn-outline-success">Success</button>
+            <button type="button" class="btn btn-outline-warning">Warning</button>
+            <button type="button" class="btn btn-outline-danger">Danger</button>
+            <button type="button" class="btn btn-outline-dark">Dark</button>
+
+            <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+            <h5 class="mt-3 border-top border-top border-info">Alerts</h5>
+
+            <div class="alert alert-primary" role="alert">
+                This is a primary alert—check it out!
+            </div>
+            <div class="alert alert-secondary" role="alert">
+                This is a secondary alert—check it out!
+            </div>
+            <div class="alert alert-success" role="alert">
+                This is a success alert—check it out!
+            </div>
+            <div class="alert alert-danger" role="alert">
+                This is a danger alert—check it out!
+            </div>
+            <div class="alert alert-warning" role="alert">
+                This is a warning alert—check it out!
+            </div>
+            <div class="alert alert-info" role="alert">
+                This is a info alert—check it out!
+            </div>
+            <div class="alert alert-light" role="alert">
+                This is a light alert—check it out!
+            </div>
+            <div class="alert alert-dark" role="alert">
+                This is a dark alert—check it out!
+            </div>
+
+            <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+            <h5 class="mt-3 border-top border-top border-info">Alerts with linked text</h5>
+
+            <div class="alert alert-primary" role="alert">
+                This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-secondary" role="alert">
+                This is a secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-success" role="alert">
+                This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-danger" role="alert">
+                This is a danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-warning" role="alert">
+                This is a warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-info" role="alert">
+                This is a info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-light" role="alert">
+                This is a light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-dark" role="alert">
+                This is a dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+
+            <h5 class="mt-3 border-top border-top border-info">Card</h5>
+
+            <div class="card">
+                <h5 class="card-header">Featured</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+            <h5 class="mt-3 border-top border-top border-info">Card with a coloured top</h5>
+
+            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <h4 class="card-header bg-success text-light">Header</h4>
+                <div class="card-body bg-transparent">
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="card-footer bg-danger text light">Footer</div>
+            </div>
+
+            <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+            <h5 class="mt-3 border-top border-top border-info">Card with colour</h5>
+
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Danger card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Info card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Light card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+
+            <!-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -->
+        </form>
+
+        <div class="row mb-5 mt-5">
+            <p class="col">These should help you with assessment items</p>
+        </div>
+        <!-- end demo HTML code -->
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-danger text-white">
+    <div class="container">
+        <div class="row">
+            <p class="text-white col">This page created by: Adrian Gould</p>
+            <p class="col">
+                Made with
+                <a href="https://getbootstrap.com"
+                   target="_blank" class="text-white">
+                    Bootstrap</a> |
+                <a href="https://hackerthemes.com/bootstrap-cheatsheet/"
+                   target="_blank" class="text-white">
+                    Bootstrap Cheat Sheet</a>
+            </p>
+            <p class="text-white-50 col text-right">Last Updated: 2019-03-19</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript Includes - External JS code -->
+<script src="../assets/js/jquery/jquery-3.3.1.min.js"></script>
+<script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+<script src="./js/demo-01.js"></script>
+<script src="./js/demo-01-radio-buttons.js"></script>
+<script src="./js/demo-01-checkboxes.js"></script>
+
+</body>
+</html>
