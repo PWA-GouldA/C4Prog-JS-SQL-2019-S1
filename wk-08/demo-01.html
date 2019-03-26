@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="../assets/js/c4prog.css"/>
 
 
-    <title>Week 07 - Demo 01</title>
+    <title>Week 08 - Demo 01</title>
 
 </head>
 <body class="d-flex flex-column h-100">
 <header>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="./">Week 07</a>
+        <a class="navbar-brand" href="./">Week 08</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,14 +31,72 @@
     <div class="container">
 
         <!-- Details about this demo file -->
-        <h1 class="mt-4">Week 07 - Demo 01</h1>
-        <h2 class="text-muted">Demo Name</h2>
-        <p class="lead">Summary of the Demo</p>
-        <p>Explanatory paragraph, if required.</p>
+        <h1 class="mt-4">Week 08 - Demo 01</h1>
+        <h2 class="text-muted">Reading Radio and Checkbox Values</h2>
+        <p class="lead">This example shows how to read the values of radio buttons and checkboxes using JavaScript</p>
         <!-- begin demo HTML code -->
 
-        <div id="results"></div>
+        <h3>Results area</h3>
+        <div class="row">
+            <div class="col">
+                <h4>Radio Button</h4>
+                <div id="outputRadio">Radio value selected ...</div>
+            </div>
+            <div class="col">
+                <h4>Check boxes</h4>
+                <div id="outputCheckboxes">...</div>
+            </div>
+            <div class="col">
+                <h4>Final Results</h4>
+                <div id="results">...</div>
+            </div>
+        </div>
 
+        <h3 class="border-top border-dark mt-5">The Form</h3>
+        <form action="" id="demoForm" name="demoForm" method="post">
+            <div class="form-group">
+                <label for="givenName">
+                    Given Name
+                </label>
+                <input type="text"
+                       id="givenName"
+                       name="givenName"
+                       class="form-control"
+                       placeholder="Enter given name"/>
+                <div id="givenNameError"></div>
+            </div>
+
+            <fieldset class="form-group" id="genderGroup">
+                <p>Gender</p>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="gender" id="genderM" value="M">
+                    <label for="genderM" class="form-check-label">Male</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="gender" id="genderF" value="F">
+                    <label for="genderF" class="form-check-label">Female</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="gender" id="genderX" value="X">
+                    <label for="genderX" class="form-check-label">Other</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <p>Opt-In</p>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="infoCheckBoxes" id="accept" value="accept">
+                    <label for="accept" class="form-check-label">I agree to the terms and conditions of use of
+                        this web application.</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="infoCheckBoxes" id="products"
+                           value="products">
+                    <label for="products" class="form-check-label">I would like to receive more details about the
+                        products you offer</label>
+                </div>
+            </fieldset>
+        </form>
         <!-- end demo HTML code -->
     </div>
 </main>
@@ -66,6 +124,8 @@
 <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 
 <script src="./js/demo-01.js"></script>
+<script src="./js/demo-01-radio-buttons.js"></script>
+<script src="./js/demo-01-checkboxes.js"></script>
 
 </body>
 </html>
