@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="JavaScript">
+
+    // let output equal nothing
+    let output = "";
+    // let number of rows equal prompt user for number of rows
+    let numberOfRows = prompt("How many rows (0-40)?", 0);
+    // for row count is from 1 to number of rows incrementing by 1
+    for (rowCount = 1; rowCount <= numberOfRows; rowCount++) {
+        //      output equal nothing
+        output = "";
+        //      for star count is from 1 to row count incrementing by 1
+        for (starCount = 1; starCount <= rowCount; starCount++) {
+            //          output equals output plus a star
+            output = output + "*";
+        }
+        //      end for star count
+        //      display the output
+        console.log(output);
+    }
+    // end for row count
+
+</script>
+</body>
+</html>

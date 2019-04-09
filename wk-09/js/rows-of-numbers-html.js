@@ -26,7 +26,7 @@ for (let num = 1; num <= maxNumber; num++) {
         // end the row
         output += "</div>";
         // if we have more numbers to output then start a new row
-        if (num <maxNumber){
+        if (num < maxNumber) {
             output += "<div class='row'>";
             // output = output + "<div class='row'>";
         } // end if num less than maxNumber
@@ -36,12 +36,12 @@ for (let num = 1; num <= maxNumber; num++) {
 // have we completed the last row?
 if (counter % numCols !== 0) {
     // no, so we calculate how many spaces are needed
-    fillSpaces = numCols - maxNumber%numCols;
+    fillSpaces = numCols - maxNumber % numCols;
 
     // for filler is from 1 to the number of extra spaces (in steps of 1)
-    for (let filler = 1; filler <= fillSpaces; filler++){
+    for (let filler = 1; filler <= fillSpaces; filler++) {
         // add a filler column/cell
-        output +="<p class='col'> </p>";
+        output += "<p class='col'> </p>";
     } // end for filler
     // add the last (closing) div
     output += "</div>";
