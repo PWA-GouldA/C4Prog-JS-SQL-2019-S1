@@ -7,25 +7,59 @@
  *
  */
 
-let doc=document;
+let doc = document;
 let selectBox = doc.getElementById('selectDays');
 let textBox = doc.getElementById('textDays');
 
 selectBox.addEventListener("change", selectChanged, false);
 textBox.addEventListener("input", textChanged, false);
 
+/**
+ * Perform actions because the text box has been changed
+ * - get the value from the text box
+ * - if in the range 28-31 then update the calendar
+ *
+ * @param e event handle
+ */
 function textChanged(e) {
     e.preventDefault();
     days = textBox.value;
-    displayCalendar(days);
+    if (isInRange(days, 28, 31)) {
+        displayCalendar(days);
+    }
 }
 
+/**
+ * Perform actions because the select box has been changed
+ * - get the value from the selected option
+ * - update the calendar
+ *
+ * @param e event handle
+ */
 function selectChanged(e) {
     e.preventDefault();
     days = selectBox.value;
     displayCalendar(days);
+    textBox.value = days;
 }
 
+/**
+ * Verify if a number is in the range given
+ *
+ * @param number
+ * @param minValue
+ * @param maxValue
+ * @returns {boolean}
+ */
+function isInRange(number, minValue, maxValue) {
+    return (number >= minValue && number <= maxValue)
+}
+
+/**
+ * Display a calendar like matrix showing the numbers from 1 to days
+ *
+ * @param days
+ */
 function displayCalendar(days) {
     // declare variables
     let counter = 0; // column counter
