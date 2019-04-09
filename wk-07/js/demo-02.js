@@ -36,5 +36,5 @@ function isEmpty(data) {
 }
 
 function isTooLong(data, maxLength) {
-    return data.length>maxLength?true:false;
+    return data.length > maxLength ? true : false;
 }

@@ -18,8 +18,8 @@ let productsCheckbox = doc.getElementById("products");
 let acceptCheckbox = doc.getElementById("accept");
 
 
-    productsCheckbox.addEventListener("change", infoCheckboxesChange, false);
-    acceptCheckbox.addEventListener("change", infoCheckboxesChange, false);
+productsCheckbox.addEventListener("change", infoCheckboxesChange, false);
+acceptCheckbox.addEventListener("change", infoCheckboxesChange, false);
 
 
 // when the state of a radio button is changed, perform this code

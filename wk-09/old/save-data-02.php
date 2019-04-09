@@ -13,13 +13,13 @@ use App\Projects;
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <!-- Bootstrap CSS file included -->
-    <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../assets/css/bootstrap/bootstrap.min.css"/>
     <!-- FontAwesome 5 Free CSS file included -->
-    <link rel="stylesheet" href="../assets/css/fontawesome/all.min.css"/>
+    <link rel="stylesheet" href="../../assets/css/fontawesome/all.min.css"/>
     <!-- Cert 4 Programming Specific Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/c4prog.css"/>
+    <link rel="stylesheet" href="../../assets/css/c4prog.css"/>
     <!-- Leafletjs Specific Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/leaflet/leaflet.css"/>
+    <link rel="stylesheet" href="../../assets/css/leaflet/leaflet.css"/>
 
     <title>SQLite Basics Tutorial</title>
 </head>

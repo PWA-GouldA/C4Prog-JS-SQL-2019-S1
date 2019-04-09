@@ -11,15 +11,15 @@ let counter = 0;
 let numCols = 7;
 let output = "";
 console.log("START");
-for (let num=1; num<=35; num++){
-    output += num.toString()+"\t";
+for (let num = 1; num <= 35; num++) {
+    output += num.toString() + "\t";
     counter++;
-    if (counter % numCols === 0){
+    if (counter % numCols === 0) {
         console.log(output);
-        output="";
+        output = "";
     }
 }
-if (counter%numCols!==0){
+if (counter % numCols !== 0) {
     console.log(output);
 }
 console.log("END");

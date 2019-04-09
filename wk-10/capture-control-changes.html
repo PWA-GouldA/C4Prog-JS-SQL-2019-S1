@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- Bootstrap CSS file included -->
+    <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css"/>
+    <!-- Cert 4 Programming Specific Stylesheet -->
+    <link rel="stylesheet" href="../assets/js/c4prog.css"/>
+
+
+    <title>Week 10 - Detecting Changes in Controls</title>
+
+</head>
+<body class="d-flex flex-column h-100">
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="./">Week 10</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- no menu items shown in this example -->
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+    <div class="container">
+
+        <!-- Details about this demo file -->
+        <h1 class="mt-4">Week 10 - Display "calendar"</h1>
+        <p class="lead">Shows a "calendar" like table of numbers depending on the value selected in the select box,
+            or the number entered in the text box.</p>
+        <p>The select box will also change the value in the text box.</p>
+
+        <form action="">
+            <div class="form-group">
+                <label for="selectDays">Select the Number of days</label>
+                <select name="selectDays" id="selectDays" class="form-control">
+                    <option value="31">January</option>
+                    <option value="28"> February</option>
+                    <option value="29"> February (leap years)</option>
+                    <option value="31">March</option>
+                    <option value="30">April</option>
+                    <option value="31">May</option>
+                    <option value="30">June</option>
+                    <option value="31">July</option>
+                    <option value="31">August</option>
+                    <option value="30">September</option>
+                    <option value="31">October</option>
+                    <option value="30">November</option>
+                    <option value="31">December</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="textDays">Enter the number of days</label>
+                <input type="text" name="textDays" id="textDays" class="form-control" />
+            </div>
+        </form>
+        <!-- begin demo HTML code -->
+
+        <div id="outputZone"></div>
+
+        <!-- end demo HTML code -->
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-danger text-white">
+    <div class="container">
+        <div class="row">
+            <p class="text-white col">This page created by: Adrian Gould</p>
+            <p class="col">
+                Made with
+                <a href="https://getbootstrap.com"
+                   target="_blank" class="text-white">
+                    Bootstrap</a> |
+                <a href="https://hackerthemes.com/bootstrap-cheatsheet/"
+                   target="_blank" class="text-white">
+                    Bootstrap Cheat Sheet</a>
+            </p>
+            <p class="text-white-50 col text-right">Last Updated: 2019-03-19</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript Includes - External JS code -->
+<script src="../assets/js/jquery/jquery-3.3.1.min.js"></script>
+<script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+<script src="js/capture-control-changes.js"></script>
+
+</body>
+</html>
