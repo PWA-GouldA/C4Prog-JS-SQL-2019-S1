@@ -1,5 +1,8 @@
-
-<h1>PP1 Q5 Pseudocode</h1>
+<div class="row m-0">
+    <div class="col bg-dark text-light">
+        <h2>PP1 Q5 Pseudocode</h2>
+    </div>
+</div>
 
 <p>Using the provided HTML and JS files, create the JavaScript that:</p>
 <ul>
@@ -22,38 +25,46 @@
     <code>
 
         let doc equal the document
-        let convert to selection equal the doc's get element by id for the convert to select box (HTML ID)
+        let convert to radio equal the doc's get element by name for the convert to select box (HTML ID)
         let temperature input equal the doc's get element by id for the temperature text box (HTML ID)
         let convert button equal the doc's get element by id for the convert button (HTML ID)
+        let converted output equal the doc's get elements by id for the output zone (HTML ID)
+
 
         convert button's event listener ( change, button pressed )
+
+        // See Week 10 capture-control changes for a hint
+        for count is from 0 to colourSchemeRadios.length incrementing by 1
+            convert to radio [count] add event listener "change" using radioChanged
+        end for
 
 
         function button pressed ( event )
             event prevent default
             temp equals temperature input's value
+            convert choice equals convert to radio's value
 
-            if is not a number (temp) then
-                display Error, you did not enter a number
+            if is a number (temp) then
+                if convert choice is F then
+                    result equals fahrenheit to celcius ( temp )
+                else
+                    if convert choice is C then
+                        result equals celcius to fahrenheit ( temp )
+                    end if
+                end if
+
+                converted output's inner text equals result
             end if
-
-            if
-        end function
-
-
-
-        function is number ( value )
-
         end function
 
 
         function fahrenheit to celcius ( temperature )
-
+            return ( temperature minus 32 ) times 9 divide by 5
         end function
 
 
         function celcius to fahrenheit ( temperature )
-
+            return ( temperature times 5 divided by 9 ) plus 32
         end function
 
 

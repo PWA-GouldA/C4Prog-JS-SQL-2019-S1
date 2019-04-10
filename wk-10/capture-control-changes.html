@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS file included -->
     <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css"/>
     <!-- Cert 4 Programming Specific Stylesheet -->
-    <link rel="stylesheet" href="../assets/js/c4prog.css"/>
+    <link rel="stylesheet" href="../assets/css/c4prog.css"/>
 
 
     <title>Week 10 - Detecting Changes in Controls</title>
@@ -40,6 +40,7 @@
             <div class="form-group">
                 <label for="selectDays">Select the Number of days</label>
                 <select name="selectDays" id="selectDays" class="form-control">
+                    <option value="" selected disabled>Please select a month</option>
                     <option value="31">January</option>
                     <option value="28"> February</option>
                     <option value="29"> February (leap years)</option>
@@ -55,14 +56,32 @@
                     <option value="31">December</option>
                 </select>
             </div>
+
             <div class="form-group">
                 <label for="textDays">Enter the number of days</label>
-                <input type="text" name="textDays" id="textDays" class="form-control" />
+                <input type="text" name="textDays" id="textDays" class="form-control"
+                       placeholder="Please enter a number of days"/>
+            </div>
+
+            <div class="form-group">
+                <p>Colour Scheme</p>
+                <div class="form-check">
+                    <input type="radio" name="colourScheme" id="colourSchemeLight"
+                           class="form-check-input"
+                           value="L" checked />
+                    <label for="colourSchemeLight" class="form-check-label">Light</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="colourScheme" id="colourSchemeDark"
+                           class="form-check-input"
+                           value="D"/>
+                    <label for="colourSchemeDark" class="form-check-label">Dark</label>
+                </div>
             </div>
         </form>
         <!-- begin demo HTML code -->
 
-        <div id="outputZone"></div>
+        <div id="outputZone" class="p-4"></div>
 
         <!-- end demo HTML code -->
     </div>

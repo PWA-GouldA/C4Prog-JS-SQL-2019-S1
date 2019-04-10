@@ -10,19 +10,74 @@
 let doc = document;
 let selectBox = doc.getElementById('selectDays');
 let textBox = doc.getElementById('textDays');
+let colourSchemeRadios = doc.getElementsByName('colourScheme'); // retrieve ALL the colour scheme radio buttons
+let outputZone = doc.getElementById('outputZone');
+
+let schemeClasses = null;
+
 
 selectBox.addEventListener("change", selectChanged, false);
 textBox.addEventListener("input", textChanged, false);
+
+// attach a listener to each radio button in the colour scheme group
+for (var i = 0; i < colourSchemeRadios.length; i++) {
+    colourSchemeRadios[i].addEventListener("change", radioChanged);
+}
+
+function radioChanged(event) {
+    event.preventDefault();
+    let scheme = null;
+
+    for (let counter = 0, len = colourSchemeRadios.length; counter < len; counter++) {
+        if (colourSchemeRadios[counter].checked) {
+            scheme = colourSchemeRadios[counter].value;
+        }
+    }
+
+    if (scheme !== null) {
+        oldSchemeClasses = schemeClasses;
+        switch (scheme) {
+            case 'D':
+                schemeClasses = ['bg-dark', 'text-light'];
+                break;
+            case 'L':
+                schemeClasses = ['bg-light', 'text-dark'];
+                break;
+            default:
+                schemeClasses = ['bg-danger', 'text-light'];
+                break;
+        }
+
+        removeClasses(outputZone, oldSchemeClasses);
+        addClasses(outputZone, schemeClasses);
+
+
+    }
+}
+
+function addClasses(target, classes) {
+    for (let i = 0; i < classes.length; i++) {
+        target.classList.add(classes[i]);
+    }
+}
+
+function removeClasses(target, classes) {
+    if (classes !== null) {
+        for (let i = 0; i < classes.length; i++) {
+            target.classList.remove(classes[i]);
+        }
+    }
+}
 
 /**
  * Perform actions because the text box has been changed
  * - get the value from the text box
  * - if in the range 28-31 then update the calendar
  *
- * @param e event handle
+ * @param event event handle
  */
-function textChanged(e) {
-    e.preventDefault();
+function textChanged(event) {
+    event.preventDefault();
     days = textBox.value;
     if (isInRange(days, 28, 31)) {
         displayCalendar(days);
@@ -34,10 +89,10 @@ function textChanged(e) {
  * - get the value from the selected option
  * - update the calendar
  *
- * @param e event handle
+ * @param event event handle
  */
-function selectChanged(e) {
-    e.preventDefault();
+function selectChanged(event) {
+    event.preventDefault();
     days = selectBox.value;
     displayCalendar(days);
     textBox.value = days;
@@ -67,7 +122,7 @@ function displayCalendar(days) {
     let numCols = 7; // number of columns in a row of numbers
 
     // start the output (first row)
-    let output = "<div class='row'>";
+    let output = "<div id='calendar' class='text-center'><div class='row'>";
 
     // for num is from 1 to maxNumber (incrementing by 1)
     for (let num = 1; num <= maxNumber; num++) {
@@ -98,7 +153,7 @@ function displayCalendar(days) {
             output += "<p class='col'> </p>";
         } // end for filler
         // add the last (closing) div
-        output += "</div>";
+        output += "</div></div>";
     } // end if more columns needed
 
     // output the results!
