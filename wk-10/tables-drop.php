@@ -16,12 +16,14 @@
 require 'connection.php';
 
 echo "<h3>Dropping Tables</h3>";
+
 $tables = [
     "contacts",
     "countries"
 ];
+
 foreach ($tables as $table) {
-    $sql = "DROP TABLE IF EXISTS";
+    $sql = 'DROP TABLE IF EXISTS ';
     // run the SQL command
     $conn->exec($sql . " " . $table);
     echo "<p>" . $table . " has been dropped</p>";

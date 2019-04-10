@@ -17,6 +17,7 @@
  */
 
 require 'connection.php';
+include_once 'page-header.php';
 
 
 // Prepare SELECT statement to SQLite3 file db
@@ -51,3 +52,6 @@ foreach ($contacts as $row) {
     <?php
 }
 
+
+
+include_once 'page-footer.php';

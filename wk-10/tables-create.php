@@ -14,7 +14,7 @@
  *              CA 94042, USA.
  */
 
-require 'connection.php';
+require_once 'connection.php';
 
 $tables = getTableList($conn);
 

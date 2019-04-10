@@ -17,7 +17,7 @@
  */
 
 require 'connection.php';
-
+include_once 'page-header.php';
 
 // check to see if ID was sent
 if (isset($_POST) && isset($_POST['id'])) {
@@ -54,18 +54,22 @@ if (isset($_POST) && isset($_POST['id'])) {
         echo "<h3>Edit Contact <?= $contact->id ?></h3>";
         ?>
         <form id="editContact" name="editContact" method="post" action="contact-update.php">
-            <input type="hidden" name="id" value="<?= $contact->id ?>"/>
+            <input type="hidden" name="id"
+                   value="<?= $contact->id ?>"/>
             <div>
                 <label for="given_name">Given Name:</label>
-                <input type="text" name="given_name" id="given_name" value="<?= $contact->given_name ?>"/>
+                <input type="text" name="given_name" id="given_name"
+                       value="<?= $contact->given_name ?>"/>
             </div>
             <div>
                 <label for="family_name">Family Name:</label>
-                <input type="text" name="family_name" id="family_name" value="<?= $contact->family_name ?>"/>
+                <input type="text" name="family_name" id="family_name"
+                       value="<?= $contact->family_name ?>"/>
             </div>
             <div>
                 <label for="email">eMail:</label>
-                <input type="email" name="email" id="email" value="<?= $contact->email ?>"/>
+                <input type="email" name="email" id="email"
+                       value="<?= $contact->email ?>"/>
             </div>
             <div>
                 <button type="submit">SAVE</button>
@@ -83,3 +87,4 @@ if (isset($_POST) && isset($_POST['id'])) {
     echo "<h1>ERROR! you cannot access this page directly</h1>";
 } // end oops you came here directly
 
+include_once 'page-footer.php';
