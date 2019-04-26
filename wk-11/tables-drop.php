@@ -13,7 +13,9 @@
  *              Commons, PO Box 1866, Mountain View, CA 94042, USA.
  */
 
-require 'connection.php';
+require_once 'connection.php';
+include_once 'page-header.php';
+
 
 echo "<h3>Dropping Tables</h3>";
 
@@ -29,3 +31,4 @@ foreach ($tables as $table) {
     echo "<p>" . $table . " has been dropped</p>";
 }
 
+include_once 'page-footer.php';
