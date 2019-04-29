@@ -18,6 +18,7 @@
 
 include_once 'page-header.php';
 require_once 'connection.php';
+require_once 'tables-drop.php';
 require_once 'tables-create.php';
 require_once 'tables-seed.php';
 include_once 'page-footer.php';

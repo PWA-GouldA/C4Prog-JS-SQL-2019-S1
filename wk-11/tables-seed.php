@@ -58,6 +58,17 @@ if (!is_bool(array_search('contacts', $tables))) {
         fclose($h);
     }
 
+    // initialise the parameter variables
+    $id = '';
+    $given_name = '';
+    $family_name = '';
+    $email = '';
+    $job_title = '';
+    $city = '';
+    $country = '';
+    $created_at = '';
+    $updated_at = '';
+
     // Prepare INSERT statement to SQLite3 file db
     $insert = "INSERT OR IGNORE INTO 
                     contacts (id, given_name, family_name, email, job_title, city, country, created_at, updated_at) 

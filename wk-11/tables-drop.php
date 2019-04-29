@@ -21,7 +21,8 @@ echo "<h3>Dropping Tables</h3>";
 
 $tables = [
     "contacts",
-    "countries"
+    "countries",
+    "cities",
 ];
 
 foreach ($tables as $table) {
