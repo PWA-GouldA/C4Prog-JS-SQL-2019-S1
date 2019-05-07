@@ -19,8 +19,10 @@ require_once "header.php";
 $filename = "./resources/Contacts-Seed-Data.csv";
 
 if (($fileHandle = fopen($filename, "r")) !== false) {
+    // reset contacts
+    $contacts=[];
 
-    // read the file, store in an array
+    // read the file, store in the array: $contacts
     while (($data = fgetcsv($fileHandle, 1000, ",")) !== false) {
         $contacts[] = [
             'id' => htmlentities($data[0]),
@@ -37,30 +39,32 @@ if (($fileHandle = fopen($filename, "r")) !== false) {
 
     fclose($fileHandle);
 
-// INSERT INTO
-//    table_name ( column_name, column_name, ...)
-// VALUES
-//    ( 'value_one', 'value_two', ...);
+    // INSERT INTO
+    //    table_name ( column_name, column_name, ...)
+    // VALUES
+    //    ( 'value_one', 'value_two', ...);
 
-// SQL Statement with placeholders
-// remove the ID as we want the SQL to insert automatically
-    $sqlInsert = "
-INSERT OR IGNORE INTO 
-    contacts ( 
-        given_name, family_name, 
-        email, job_title, city, 
-        country_code, created_at, updated_at )
-VALUES 
-    (   
-        :given, :family, 
-        :email, :job, :city, 
-        :country, :created, :updated 
-        );
-";
+    // SQL Statement with placeholders
+    // remove the ID as we want the SQL to insert automatically
+        $sqlInsert = "
+    INSERT OR IGNORE INTO 
+        contacts ( 
+            given_name, family_name, 
+            email, job_title, city, 
+            country_code, created_at, updated_at )
+    VALUES 
+        (   
+            :given, :family, 
+            :email, :job, :city, 
+            :country, :created, :updated 
+            );
+    ";
 
-// Prepare the SQL for use
+    // Prepare the SQL for use
     $stmt = $conn->prepare($sqlInsert);
 
+    // loop through EACH contact in the contacts array,
+    // extracting the values and inserting them into the SQL
     foreach ($contacts as $contact) {
         $given = $contact['given_name'];
         $family = $contact['family_name'];
@@ -71,6 +75,7 @@ VALUES
         $date = date("Y-M-d H:i:s");
 
         // Bind the values to the SQL parameters
+        //                PARAMETER, VALUE, TYPE
         $stmt->bindParam(":given", $given, PDO::PARAM_STR);
         $stmt->bindParam(":family", $family, PDO::PARAM_STR);
         $stmt->bindParam(":email", $email, PDO::PARAM_STR);
@@ -80,10 +85,19 @@ VALUES
         $stmt->bindParam(":created", $date, PDO::PARAM_STR);
         $stmt->bindParam(":updated", $date, PDO::PARAM_STR);
 
+        // run the SQL file
         $stmt->execute();
-        echo $stmt->rowCount() ? "<p class='col-7 '>" . $given . " " . $family . " added</p> " : "";
+        // display a message if insert worked
+        echo $stmt->rowCount() ? "<p class='col-4 '>" . $given . " " . $family . "</p> " : "";
     } // end foreach
 
 } // end if file open...
+
+
+// EXERCISE 1: Create the Seed code for the COUNTRIES table
+
+
+// EXERCISE 2: Create the Seed code for the CITIES table
+
 
 require_once "footer.php";
