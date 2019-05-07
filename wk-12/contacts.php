@@ -12,13 +12,13 @@
  *              Attribution-ShareAlike 3.0 Australia License.
  */
 
-$title = "Week 12 | Browse Contacts";
+$title = "Week 12 | Contacts";
 require_once "header.php";
 require_once "connection.php";
 
 // Read the contacts from the db into an array
 // SQL to select all (fields) from the contacts
-$sqlBrowse = "SELECT * FROM contacts;";
+$sqlBrowse = "SELECT * FROM contacts ORDER BY created_at DESc LIMIT 5;";
 
 // SQL to select the given, family and email only
 // SELECT given_name, family_name, email FROM contacts
@@ -35,12 +35,14 @@ $contacts = $stmt->fetchAll();
 <div class="row">
     <div class="col">
         <h1 class="mt-4"><?= $title; ?></h1>
-        <h2 class="text-muted">Contacts List</h2>
-        <p class="text-right"><a href="contacts-add.php" class="btn btn-success mb-1">Add new contact</a></p>
-
-
+        <h2 class="text-muted">Last Five Contacts Added</h2>
+        <div class="row">
+            <p class="col"><a href="contacts-browse.php" class="btn btn-primary mb-1">Browse all</a></p>
+            <p class="col text-right"><a href="contacts-add.php" class="btn btn-success mb-1">Add new contact</a></p>
+        </div>
     </div>
 </div>
+
 <!-- begin demo HTML code -->
 <div class="row">
     <div class="col">
@@ -49,8 +51,7 @@ $contacts = $stmt->fetchAll();
             <tr>
                 <th>Given</th>
                 <th>Family</th>
-                <th>eMail</th>
-                <th colspan="3">Actions</th>
+                <th>Date Added</th>
             </tr>
             </thead>
 
@@ -61,29 +62,10 @@ $contacts = $stmt->fetchAll();
                 <tr>
                     <td><?= $contact->given_name ?></td>
                     <td><?= $contact->family_name ?></td>
-                    <td><?= $contact->email ?></td>
-                    <td><a
-                            href="contacts-read.php?contact=<?= $contact->id ?>"
-                            class="btn btn-primary mb-1">
-                            View
-                        </a>
-                    </td>
-                    <td><a
-                            href="contacts-edit.php?contact=<?= $contact->id ?>"
-                            class="btn btn-warning mb-1">
-                            Edit
-                        </a>
-                    </td>
-                    <td>
-                        <a
-                            href="contacts-delete.php?contact=<?= $contact->id ?>"
-                            class="btn btn-danger mb-1">
-                            Delete
-                        </a>
-                    </td>
+                    <td><?= $contact->created_at ?></td>
                 </tr>
                 <?php
-            }
+            } // end for each
             ?>
             </tbody>
         </table>

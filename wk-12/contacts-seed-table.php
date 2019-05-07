@@ -93,11 +93,4 @@ if (($fileHandle = fopen($filename, "r")) !== false) {
 
 } // end if file open...
 
-
-// EXERCISE 1: Create the Seed code for the COUNTRIES table
-
-
-// EXERCISE 2: Create the Seed code for the CITIES table
-
-
 require_once "footer.php";
