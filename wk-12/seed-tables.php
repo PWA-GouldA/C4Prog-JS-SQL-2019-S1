@@ -16,30 +16,26 @@
 require_once "connection.php";
 require_once "header.php";
 
-// define a contact as an array using associative data
-$contacts = [
-    [
-        'given_name' => 'Adrian',
-        'family_name' => 'Gould',
-        'email' => 'adrian.gould@example.com',
-        'job_title' => 'lecturer',
-        'city' => 'Perth',
-        'country_code' => 'AU',
-        'created_at' => '2019-04-30 12:25:45',
-        'updated_at' => '2019-04-30 12:25:45',
-    ],
-    [
-        'given_name' => 'Jacques',
-        'family_name' => 'd\'Carre',
-        'email' => 'mechanic@example.com',
-        'job_title' => 'mechanic',
-        'city' => 'London',
-        'country_code' => 'CA',
-        'created_at' => '2019-04-30 12:25:45',
-        'updated_at' => '2019-04-30 12:25:45',
-    ],
+$filename = "./resources/Contacts-Seed-Data.csv";
 
-];
+if (($fileHandle = fopen($filename, "r")) !== false) {
+
+    // read the file, store in an array
+    while (($data = fgetcsv($fileHandle, 1000, ",")) !== false) {
+        $contacts[] = [
+            'id' => htmlentities($data[0]),
+            'given_name' => htmlentities($data[1]),
+            'family_name' => htmlentities($data[2]),
+            'email' => htmlentities($data[3]),
+            'job_title' => htmlentities($data[4]),
+            'city' => htmlentities($data[5]),
+            'country_code' => htmlentities($data[6]),
+            'created_at' => htmlentities($data[7]),
+            'updated_at' => htmlentities($data[8]),
+        ];
+    } // end read the seed data
+
+    fclose($fileHandle);
 
 // INSERT INTO
 //    table_name ( column_name, column_name, ...)
@@ -48,7 +44,7 @@ $contacts = [
 
 // SQL Statement with placeholders
 // remove the ID as we want the SQL to insert automatically
-$sqlInsert = "
+    $sqlInsert = "
 INSERT OR IGNORE INTO 
     contacts ( 
         given_name, family_name, 
@@ -63,29 +59,31 @@ VALUES
 ";
 
 // Prepare the SQL for use
-$stmt = $conn->prepare($sqlInsert);
+    $stmt = $conn->prepare($sqlInsert);
 
-foreach ($contacts as $contact) {
-    $given = $contact['given_name'];
-    $family = $contact['family_name'];
-    $email = $contact['email'];
-    $job = $contact['job_title'];
-    $city = $contact['city'];
-    $code = $contact['country_code'];
-    $date = date("Y-M-d H:i:s");
+    foreach ($contacts as $contact) {
+        $given = $contact['given_name'];
+        $family = $contact['family_name'];
+        $email = $contact['email'];
+        $job = $contact['job_title'];
+        $city = $contact['city'];
+        $code = $contact['country_code'];
+        $date = date("Y-M-d H:i:s");
 
-// Bind the values to the SQL parameters
-    $stmt->bindParam(":given", $given, PDO::PARAM_STR);
-    $stmt->bindParam(":family", $family, PDO::PARAM_STR);
-    $stmt->bindParam(":email", $email, PDO::PARAM_STR);
-    $stmt->bindParam(":job", $job, PDO::PARAM_STR);
-    $stmt->bindParam(":city", $city, PDO::PARAM_STR);
-    $stmt->bindParam(":country", $code, PDO::PARAM_STR);
-    $stmt->bindParam(":created", $date, PDO::PARAM_STR);
-    $stmt->bindParam(":updated", $date, PDO::PARAM_STR);
+        // Bind the values to the SQL parameters
+        $stmt->bindParam(":given", $given, PDO::PARAM_STR);
+        $stmt->bindParam(":family", $family, PDO::PARAM_STR);
+        $stmt->bindParam(":email", $email, PDO::PARAM_STR);
+        $stmt->bindParam(":job", $job, PDO::PARAM_STR);
+        $stmt->bindParam(":city", $city, PDO::PARAM_STR);
+        $stmt->bindParam(":country", $code, PDO::PARAM_STR);
+        $stmt->bindParam(":created", $date, PDO::PARAM_STR);
+        $stmt->bindParam(":updated", $date, PDO::PARAM_STR);
 
-    $stmt->execute();
-    echo $stmt->rowCount() ? "<p class='col-3 '>" . $given . " " . $family . " added</p> " : "";
-} // end foreach
+        $stmt->execute();
+        echo $stmt->rowCount() ? "<p class='col-7 '>" . $given . " " . $family . " added</p> " : "";
+    } // end foreach
+
+} // end if file open...
 
 require_once "footer.php";
