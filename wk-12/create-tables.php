@@ -8,12 +8,13 @@
  * @author      Adrian Gould <Adrian.Gould@tafe.wa.edu.au>
  * @file        create-tables.php
  * @project     C4Prog-JS-SQL-2019-S1
- * @version     1.0
+ * @version     1.1
  * @created     2019-04-30
  * @copyright   This work is licensed under the Creative Commons
  *              Attribution-ShareAlike 3.0 Australia License.
  */
 
+require_once 'header.php'; // ensure we have added the header
 require_once 'connection.php'; // must have this file to continue
 
 echo "<h3 class='alert alert-primary'>Creating Contacts table</h3>";
@@ -57,13 +58,16 @@ $sqlDropTable = "DROP TABLE IF EXISTS countries";
 $conn->exec($sqlDropTable);
 
 
-$sql = "CREATE TABLE IF NOT EXISTS contacts (
+$sql = "CREATE TABLE IF NOT EXISTS countries (
                 country_code    TEXT,
                 name            TEXT,
                 created_at      TEXT,
                 updated_at      TEXT,
                 PRIMARY KEY (country_code)
             );";
+
+echo "<h3 class='alert alert-primary'>Creating Countries table</h3>";
+
 // run the SQL command
 try {
     $conn->exec($sql);
@@ -88,7 +92,7 @@ try {
 $sqlDropTable = "DROP TABLE IF EXISTS cities";
 $conn->exec($sqlDropTable);
 
-$sql = "CREATE TABLE IF NOT EXISTS contacts (
+$sql = "CREATE TABLE IF NOT EXISTS cities (
                 id              INTEGER,
                 name            TEXT,
                 country_code    TEXT,
@@ -97,6 +101,9 @@ $sql = "CREATE TABLE IF NOT EXISTS contacts (
                 updated_at      TEXT,
                 PRIMARY KEY (id)
             );";
+
+echo "<h3 class='alert alert-primary'>Creating Cities table</h3>";
+
 // run the SQL command
 try {
     $conn->exec($sql);
@@ -105,3 +112,5 @@ try {
     echo "<h4 class='alert alert-danger'>Problem creating Cities</h4>";
     die(0);
 }
+
+require_once "footer.php";
