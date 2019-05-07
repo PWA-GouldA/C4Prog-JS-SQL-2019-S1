@@ -1,3 +1,17 @@
+<?php
+/**
+ * Header
+ *
+ * Header content for our pages
+ *
+ * @author      Adrian Gould <adrian.gould@nmtafe.wa.edu.au>
+ * @file        header.php
+ * @version     1.0
+ * @created     2019-05-07
+ * @copyright   This work is licensed under Creative Commons
+ *              Attribution-ShareAlike 3.0 Australia License.
+ */
+?>
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 <head>
@@ -33,46 +47,3 @@
 <!-- Begin page content -->
 <main role="main" class="flex-shrink-0">
     <div class="container">
-
-        <!-- Details about this demo file -->
-        <div class="row">
-            <div class="col">
-                <h1 class="mt-4">Week 12 | Home </h1>
-                <h2 class="text-muted">Welcome to My Contacts</h2>
-                <p class="lead">Quick Description</p>
-            </div>
-        </div>
-        <!-- begin demo HTML code -->
-
-
-        <!-- end demo HTML code -->
-    </div>
-</main>
-
-<footer class="footer mt-auto py-3 bg-danger text-white">
-    <div class="container">
-        <div class="row">
-            <p class="text-white col">This page created by: YOUR NAME</p>
-            <p class="col">
-                Made with
-                <a href="https://getbootstrap.com"
-                   target="_blank" class="text-white">
-                    Bootstrap
-                </a> |
-                <a href="https://hackerthemes.com/bootstrap-cheatsheet/"
-                   target="_blank" class="text-white">
-                    Bootstrap Cheat Sheet
-                </a>
-            </p>
-            <p class="text-white-50 col text-right">Last Updated: 2019-XX-XX</p>
-        </div>
-    </div>
-</footer>
-
-<!-- JavaScript Includes - External JS code -->
-<script src="../assets/js/jquery/jquery-3.3.1.min.js"></script>
-<script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
-
-
-</body>
-</html>

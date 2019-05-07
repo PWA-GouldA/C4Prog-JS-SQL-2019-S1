@@ -52,27 +52,56 @@ try {
  * created_at       TEXT
  * updated_at       TEXT
  */
-// EXERCISE: ADD THE PHP CODE TO CREATE THE COUNTRIES TABLE
-// delete the contacts table & data if it exists
+// delete the countries table & data if it exists
 $sqlDropTable = "DROP TABLE IF EXISTS countries";
 $conn->exec($sqlDropTable);
 
+
+$sql = "CREATE TABLE IF NOT EXISTS contacts (
+                country_code    TEXT,
+                name            TEXT,
+                created_at      TEXT,
+                updated_at      TEXT,
+                PRIMARY KEY (country_code)
+            );";
+// run the SQL command
+try {
+    $conn->exec($sql);
+    echo "<h4 class='alert alert-success'>Countries Table Created</h4>";
+} catch (PDOException $exception) {
+    echo "<h4 class='alert alert-danger'>Problem creating Countries</h4>";
+    die(0);
+}
 /**
  * Table: cities
  * Field Name       Type (You Add)      Primary Key?
  * -------------------------------------------------------------
- * id
- * name
- * country_code
- * population
- * created_at
- * updated_at
+ * id               INTEGER             Y
+ * name             TEXT
+ * country_code     TEXT
+ * population       INTEGER
+ * created_at       TEXT
+ * updated_at       TEXT
  */
 
-// delete the contacts table & data if it exists
+// delete the cities table & data if it exists
 $sqlDropTable = "DROP TABLE IF EXISTS cities";
 $conn->exec($sqlDropTable);
 
-// EXERCISE: ADD THE FIELD TYPES TO THE TABLE ABOVE
-// EXERCISE: IDENTIFY THE PRIMARY KEY FOR THE TABLE ABOVE
-// EXERCISE: WRITE THE PHP CODE TO CREATE THE CITIES TABLE
+$sql = "CREATE TABLE IF NOT EXISTS contacts (
+                id              INTEGER,
+                name            TEXT,
+                country_code    TEXT,
+                population      INTEGER,
+                created_at      TEXT,
+                updated_at      TEXT,
+                PRIMARY KEY (id)
+            );";
+// run the SQL command
+try {
+    $conn->exec($sql);
+    echo "<h4 class='alert alert-success'>Cities Table Created</h4>";
+} catch (PDOException $exception) {
+    echo "<h4 class='alert alert-danger'>Problem creating Cities</h4>";
+    die(0);
+}
