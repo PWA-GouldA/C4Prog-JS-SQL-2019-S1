@@ -18,7 +18,7 @@ require_once "connection.php";
 
 // Read the contacts from the db into an array
 // SQL to select all (fields) from the contacts
-$sqlBrowse = "SELECT * FROM contacts ORDER BY created_at DESc LIMIT 5;";
+$sqlBrowse = "SELECT * FROM contacts ORDER BY created_at DESC LIMIT 5;";
 
 // SQL to select the given, family and email only
 // SELECT given_name, family_name, email FROM contacts

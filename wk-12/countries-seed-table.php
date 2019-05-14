@@ -34,7 +34,7 @@ if (!is_bool(array_search('countries', $tables))) {
         // convert extended characters to HTML entities ready for storage
         while (($data = fgetcsv($h, 1000, ",")) !== false) {
             $countries[] = [
-                'code' => /* get the code from the array */,
+                'code' => htmlentities($data[0]),
                 'name' => htmlentities($data[1])
             ];
         }
@@ -45,8 +45,10 @@ if (!is_bool(array_search('countries', $tables))) {
 
 
     // Prepare INSERT statement to SQLite3 file db
-    // CREATE THE SQL TO INSERT A COUNTRY
-    $insert = "";
+    $insert = "INSERT OR IGNORE INTO 
+                    countries(country_code, name, created_at, updated_at) 
+               VALUES
+                    (:code, :name, :created, :updated)";
     $stmt = $conn->prepare($insert);
 
     $code = null;

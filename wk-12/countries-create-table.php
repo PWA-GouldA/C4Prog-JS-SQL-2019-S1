@@ -21,7 +21,7 @@ require_once 'connection.php'; // must have this file to continue
  * Table: countries
  * Field name       Type        Primary Key?
  * -------------------------------------------------------------
- * country_code     TEXT            YES
+ * country_code             TEXT            YES
  * name             TEXT
  * created_at       TEXT
  * updated_at       TEXT
@@ -31,15 +31,19 @@ $sqlDropTable = "DROP TABLE IF EXISTS countries";
 $conn->exec($sqlDropTable);
 
 // Create the Countries table given the data above
-// ADD THE CORRECT SQL TO CREATE THE TABLE
-$sql = " ";
+$sql = "CREATE TABLE IF NOT EXISTS countries (
+                country_code    TEXT,
+                name            TEXT,
+                created_at      TEXT,
+                updated_at      TEXT,
+                PRIMARY KEY (country_code)
+            );";
 
 echo "<h3 class='alert alert-primary'>Creating Countries table</h3>";
 
 // run the SQL command
 try {
-    // execute the SQL
-
+    $conn->exec($sql);
     echo "<h4 class='alert alert-success'>Countries Table Created</h4>";
 } catch (PDOException $exception) {
     echo "<h4 class='alert alert-danger'>Problem creating Countries</h4>";

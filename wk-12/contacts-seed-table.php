@@ -72,7 +72,7 @@ if (($fileHandle = fopen($filename, "r")) !== false) {
         $job = $contact['job_title'];
         $city = $contact['city'];
         $code = $contact['country_code'];
-        $date = date("Y-M-d H:i:s");
+        $date = date("Y-m-d H:i:s");
 
         // Bind the values to the SQL parameters
         //                PARAMETER, VALUE, TYPE
