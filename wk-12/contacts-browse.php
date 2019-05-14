@@ -18,7 +18,7 @@ require_once "connection.php";
 
 // Read the contacts from the db into an array
 // SQL to select all (fields) from the contacts
-$sqlBrowse = "SELECT * FROM contacts;";
+$sqlBrowse = "SELECT * FROM contacts ORDER BY given_name, family_name, email;";
 
 // SQL to select the given, family and email only
 // SELECT given_name, family_name, email FROM contacts
@@ -29,6 +29,7 @@ $stmt->execute();
 
 // store results in array
 $contacts = $stmt->fetchAll();
+
 // To show a variable for debugging: var_dump($contacts);
 ?>
 <!-- Details about this demo file -->
@@ -62,23 +63,21 @@ $contacts = $stmt->fetchAll();
                     <td><?= $contact->given_name ?></td>
                     <td><?= $contact->family_name ?></td>
                     <td><?= $contact->email ?></td>
-                    <td><a
-                            href="contacts-read.php?contact=<?= $contact->id ?>"
+
+                    <td class="btn-group">
+                        <a href="contacts-read.php?contact=<?= $contact->id ?>"
                             class="btn btn-primary mb-1">
-                            View
+                            <i class="fa fa-eye"></i> View
                         </a>
-                    </td>
-                    <td><a
-                            href="contacts-edit.php?contact=<?= $contact->id ?>"
+
+                        <a href="contacts-edit.php?contact=<?= $contact->id ?>"
                             class="btn btn-warning mb-1">
-                            Edit
+                            <i class="fa fa-pen"></i> Edit
                         </a>
-                    </td>
-                    <td>
-                        <a
-                            href="contacts-delete.php?contact=<?= $contact->id ?>"
+
+                        <a href="contacts-delete.php?contact=<?= $contact->id ?>"
                             class="btn btn-danger mb-1">
-                            Delete
+                            <i class="fa fa-minus"></i> Delete
                         </a>
                     </td>
                 </tr>
