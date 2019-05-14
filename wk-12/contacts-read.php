@@ -93,10 +93,10 @@ if (isset($_GET['contact'])) {
     </ul>
 
     <div class="row">
-            <a href="contact-add.php" class="col btn btn-primary mr-2"><i class="fa fa-plus"></i> Add</a>
-            <a href="contact-edit.php?id=<?= $row->id ?>" class="col btn btn-secondary mr-2"><i class="fa fa-pen"></i>
+            <a href="contacts-add.php" class="col btn btn-primary mr-2"><i class="fa fa-plus"></i> Add</a>
+            <a href="contacts-edit.php?contact=<?= $row->id ?>" class="col btn btn-secondary mr-2"><i class="fa fa-pen"></i>
             Edit</a>
-            <a href="contact-delete.php?id=<?= $row->id ?>" class="col btn btn-warning mr-2"><i class="fa fa-minus"></i>
+            <a href="contacts-delete.php?contact=<?= $row->id ?>" class="col btn btn-warning mr-2"><i class="fa fa-minus"></i>
             Delete</a>
         <div class="col-8"></div>
     </div>
