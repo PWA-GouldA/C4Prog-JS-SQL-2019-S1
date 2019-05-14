@@ -19,6 +19,11 @@
  *              Attribution-ShareAlike 3.0 Australia License.
  */
 
+/** Define if PRODUCTION or DEBUG/DEV */
+if (!defined('DEBUG')){
+    define('DEBUG',true);
+}
+
 /**
  * Define the DB Folder to hold the SQLite file
  * Define the SQLite database filename

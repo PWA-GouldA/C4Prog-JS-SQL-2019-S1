@@ -24,7 +24,9 @@ if (!function_exists('getTableList')) {
     function getTableList($conn = null)
     {
         try {
-            $stmt = $conn->query("SELECT name FROM sqlite_master WHERE type = 'table' ORDER BY name");
+            $stmt = $conn->query(
+                "SELECT name FROM sqlite_master WHERE type = 'table' ORDER BY name ASC"
+            );
             $tables = [];
             while ($row = $stmt->fetch(\PDO::FETCH_OBJ)) {
                 $tables[] = $row->name;

@@ -6,7 +6,7 @@
  * tables for this database: contacts, countries and cities
  *
  * @author      Adrian Gould <Adrian.Gould@tafe.wa.edu.au>
- * @file        contacts-create-table.php
+ * @file        countries-create-table.php
  * @project     C4Prog-JS-SQL-2019-S1
  * @version     1.1
  * @created     2019-04-30
@@ -21,7 +21,7 @@ require_once 'connection.php'; // must have this file to continue
  * Table: countries
  * Field name       Type        Primary Key?
  * -------------------------------------------------------------
- * code             TEXT            YES
+ * country_code     TEXT            YES
  * name             TEXT
  * created_at       TEXT
  * updated_at       TEXT
@@ -30,23 +30,25 @@ require_once 'connection.php'; // must have this file to continue
 $sqlDropTable = "DROP TABLE IF EXISTS countries";
 $conn->exec($sqlDropTable);
 
-
-$sql = "CREATE TABLE IF NOT EXISTS countries (
-                country_code    TEXT,
-                name            TEXT,
-                created_at      TEXT,
-                updated_at      TEXT,
-                PRIMARY KEY (country_code)
-            );";
+// Create the Countries table given the data above
+// ADD THE CORRECT SQL TO CREATE THE TABLE
+$sql = " ";
 
 echo "<h3 class='alert alert-primary'>Creating Countries table</h3>";
 
 // run the SQL command
 try {
-    $conn->exec($sql);
+    // execute the SQL
+
     echo "<h4 class='alert alert-success'>Countries Table Created</h4>";
 } catch (PDOException $exception) {
     echo "<h4 class='alert alert-danger'>Problem creating Countries</h4>";
+    // Other exception handling/error output
+    if (DEBUG) {
+        echo "<p>" . $exception->getMessage() . "</p>";
+        echo "<p>" . $exception->getTraceAsString() . "</p>";
+    }
+    // end other error output
     die(0);
 }
 
