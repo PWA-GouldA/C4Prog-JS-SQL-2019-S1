@@ -23,16 +23,73 @@
     owner_id    INT         11      not null, default 0
     animal_id   INT         11      not null, default 0
     ```
-        and the primary key of `owner id` and `animal id`.
-        
-        
+        and the primary key of `id`
+       
+       
 2)  Update the owner_animals table to include the two fields:
-        ```text
+```text
             Field       Type    Size    Other
             created_at  DATETIME        default CURRENT TIMESTAMP
             updated_at  DATETIME        default CURRENT TIMESTAMP
                                         on update CURRENT TIMESTAMP
-                                        ```               
+```
+For example:
+```mysql
+    ALTER TABLE animals
+    	ADD COLUMN owner_id INT(11) UNSIGNED NOT NULL DEFAULT 0 AFTER id,
+ 	    ADD COLUMN animal_id INT(11) UNSIGNED NOT NULL DEFAULT 0 AFTER owner_id;
+```    
+3) Add a unique key for the owner_animals table:
+        unique key of `owner id` and `animal id`.
+```mysql
+ALTER TABLE animals
+	ADD UNIQUE INDEX owner_animals_index (owner_id, animal_id);
+```
+3) Insert the following data into the two tables:
 
-) Insert the following data into the two tables:
-        
+    *Owners table*
+| ID | Full Name        |
+|----|------------------|
+| 1  | Eileen Dover     |
+| 2  | Jaques d'Carre   |
+| 3  | Newt Tonne       |
+| 4  | Russell Leaves   |
+| 5  | YOUR NAME        |
+| 6  | Will Ng          |
+    
+4) Use the following commands on your animals table:
+```mysql
+TRUNCATE animals;
+INSERT INTO 
+    animals (id, animal_name, species, date_of_birth) 
+VALUES 
+    (1, 'Speedy', 'Tortoise', '2015-07-22'),
+    (3, 'Squawk', 'Parrot', '2010-11-11'),
+    (4, 'Scritch', 'Cat', '2012-07-22'),
+    (8, 'Ruff', 'Dog', '2016-07-22'),
+    (9, 'Squeaker', 'Mouse', '2019-01-01'),
+    (null, 'Squeaky', 'Mouse', '2019-01-01'),
+    (2, 'Trunky', 'Elephant', '2004-07-22'),
+    (12, 'Chirpy', 'Parrot', '2012-07-22'),
+    (6, 'Growl', 'Dog', '2017-09-22'),
+    (5, 'Zoom', 'Tortoise', '2018-07-22'),
+    (14, 'Meow', 'Cat', '2011-07-22'),
+    (null, 'Hiss', 'Snake', '2014-07-22'),
+    (null, 'Squeal', 'Pig', '2017-09-30');
+```
+
+
+
+5) Now add the following owner animals    
+    
+    *Owner Animals table*
+    
+| Owner Name       | Animal Name        |
+|------------------|--------------------|
+| Eileen Dover     | 
+| Jaques d'Carre   | 
+| Newt Tonne       | 
+| Russell Leaves   | 
+| YOUR NAME        | 
+| Will Ng          | 
+                
