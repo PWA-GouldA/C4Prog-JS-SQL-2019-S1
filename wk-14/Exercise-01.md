@@ -101,10 +101,27 @@ VALUES
     Add the following people and their pets to the tables.
     Some of the people and pets are new.
     
-| Owner Name       | Animal Name        | Animal               |
-|------------------|--------------------|----------------------|
-| Jaques d'Carre   | Barky              | Cat                  |
-| Jaques d'Carre   | Speedy             | Tortoise             |
-| Owen Allott      | Sleepy             | Mouse                |
-| Owen Allott      | Slither            | Snake                |
-| Russell Leaves   | Speedy             | Mouse                |    
+| Owner Name       | Animal Name        | Animal        |
+|------------------|--------------------|---------------|
+| Jaques d'Carre   | Barky              | Cat           |
+| Ivana Vin        |                    |               |
+| Jaques d'Carre   | Speedy             | Tortoise      |
+| Owen Allott      | Sleepy             | Mouse         |
+| Owen Allott      | Slither            | Snake         |
+| Russell Leaves   | Speedy             | Mouse         |    
+| May Bee          | Hive               | Bee           |
+
+7) We now need to add a column to the animals table to say when
+they have passed away.
+
+Add the column `date_of_death` that is a `DATETIME` field, which **IS allowed** to be `NULL`. It has NO default value.  
+
+8) Update the following animals with their `date_of_death`:
+
+|---------------|---------------|
+| Animal name   | Date of Death |
+|---------------|---------------|
+| Trunky        | 2019-05-21    |
+| Meow          | 2019-02-29    |
+| Squeaky       | 2019-04-22    |
+
