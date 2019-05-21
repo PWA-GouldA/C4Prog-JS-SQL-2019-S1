@@ -12,6 +12,8 @@
             updated_at  DATETIME        default CURRENT TIMESTAMP
                                         on update CURRENT TIMESTAMP
 ```                                        
+=======
+>>>>>>> master
         and the primary key being the `id`.                                        
     
     b)  Create a new 'owner_animals' table with the following:
