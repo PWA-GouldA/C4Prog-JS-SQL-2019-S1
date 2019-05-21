@@ -79,18 +79,32 @@ VALUES
     (null, 'Squeal', 'Pig', '2017-09-30');
 ```
 
-
-
 5) Now add the following owner animals    
     
     *Owner Animals table*
     
 | Owner Name       | Animal Name        |
 |------------------|--------------------|
-| Eileen Dover     | 
-| Jaques d'Carre   | 
-| Newt Tonne       | 
-| Russell Leaves   | 
-| YOUR NAME        | 
-| Will Ng          | 
+| Jaques d'Carre   | Ruff               |
+| Eileen Dover     | Squeaky            |
+| Eileen Dover     | Zoom               |
+| YOUR NAME        | Scritch            |
+| Jaques d'Carre   | Growl              |
+| Newt Tonne       | HAS NO ANIMALS     |
+| Eileen Dover     | Squeaker           |
+| Russell Leaves   | Meow               |
+| YOUR NAME        | Hiss               |
+| Will Ng          | Squeal             |
+| Russell Leaves   | Chirpy             |
                 
+6) Now we have been told that some people have new pets.
+    Add the following people and their pets to the tables.
+    Some of the people and pets are new.
+    
+| Owner Name       | Animal Name        | Animal               |
+|------------------|--------------------|----------------------|
+| Jaques d'Carre   | Barky              | Cat                  |
+| Jaques d'Carre   | Speedy             | Tortoise             |
+| Owen Allott      | Sleepy             | Mouse                |
+| Owen Allott      | Slither            | Snake                |
+| Russell Leaves   | Speedy             | Mouse                |    
