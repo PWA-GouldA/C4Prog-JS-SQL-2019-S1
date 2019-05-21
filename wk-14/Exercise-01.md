@@ -1,8 +1,13 @@
-# Exercises
+# EXERCISES
 
-1) Write the SQL commands to do the following:
-    a)  Create a new 'owners' table in the animals database
-        with the fields:
+## DATABASE DEFINITION LANGUAGE EXERCISES
+These exercises concentrate on creating and updating tables.
+
+We also do some data manipulation by inserting data into these tables.
+
+Write the SQL commands to do the following:
+### Exercise 1
+Create a new 'owners' table in the animals database with the fields:
         
         ```text
             Field       Type    Size    Other
@@ -15,8 +20,9 @@
                                         ```        
 
         and the primary key being the 'id'.                                        
-    
-    b)  Create a new 'owner_animals' table with the following:
+### Exercise 2
+Create a new 'owner_animals' table with the following:
+
     ```text
     Field       Type        Size    Other
     id          INT         11      not null, auto increment
@@ -25,29 +31,33 @@
     ```
         and the primary key of `id`
        
-       
-2)  Update the owner_animals table to include the two fields:
+### Exercise 3       
+Update the owner_animals table to include the two fields:
+
 ```text
             Field       Type    Size    Other
             created_at  DATETIME        default CURRENT TIMESTAMP
             updated_at  DATETIME        default CURRENT TIMESTAMP
                                         on update CURRENT TIMESTAMP
 ```
+
 For example:
 ```mysql
     ALTER TABLE animals
     	ADD COLUMN owner_id INT(11) UNSIGNED NOT NULL DEFAULT 0 AFTER id,
  	    ADD COLUMN animal_id INT(11) UNSIGNED NOT NULL DEFAULT 0 AFTER owner_id;
 ```    
-3) Add a unique key for the owner_animals table:
-        unique key of `owner id` and `animal id`.
+
+### Exercise 4
+Add a unique key for the owner_animals table of `owner id` and `animal id`.
+
 ```mysql
 ALTER TABLE animals
 	ADD UNIQUE INDEX owner_animals_index (owner_id, animal_id);
 ```
-3) Insert the following data into the two tables:
 
-    *Owners table*
+### Exercise 5
+Insert the following data into the Owners table
     
 | ID | Full Name        |
 |----|------------------|
@@ -58,7 +68,9 @@ ALTER TABLE animals
 | 5  | YOUR NAME        |
 | 6  | Will Ng          |
     
-4) Use the following commands on your animals table:
+### Exercise 6    
+Use the following commands on your animals table:
+
 ```mysql
 TRUNCATE animals;
 INSERT INTO 
@@ -79,7 +91,10 @@ VALUES
     (null, 'Squeal', 'Pig', '2017-09-30');
 ```
 
-5) Now add the following owner animals    
+What did the `truncate` command do?
+
+### Exercise 7
+Now add the following owner animals    
     
     *Owner Animals table*
     
@@ -96,10 +111,12 @@ VALUES
 | YOUR NAME        | Hiss               |
 | Will Ng          | Squeal             |
 | Russell Leaves   | Chirpy             |
-                
-6) Now we have been told that some people have new pets.
-    Add the following people and their pets to the tables.
-    Some of the people and pets are new.
+
+### Exercise 8                
+Now we have been told that some people have new pets.
+
+Add the following people and their pets to the tables. Some of 
+the people and pets are new.
     
 | Owner Name       | Animal Name        | Animal        |
 |------------------|--------------------|---------------|
@@ -111,12 +128,14 @@ VALUES
 | Russell Leaves   | Speedy             | Mouse         |    
 | May Bee          | Hive               | Bee           |
 
-7) We now need to add a column to the animals table to say when
+### Exercise 9
+We now need to add a column to the animals table to say when
 they have passed away.
 
 Add the column `date_of_death` that is a `DATETIME` field, which **IS allowed** to be `NULL`. It has NO default value.  
 
-8) Update the following animals with their `date_of_death`:
+### Exercise 10
+Update the following animals with their `date_of_death`:
 
 | Animal name   | Date of Death |
 |---------------|---------------|
@@ -124,3 +143,4 @@ Add the column `date_of_death` that is a `DATETIME` field, which **IS allowed** 
 | Meow          | 2019-02-29    |
 | Squeaky       | 2019-04-22    |
 
+# QUESTIONING THE DATABASE EXERCISES
