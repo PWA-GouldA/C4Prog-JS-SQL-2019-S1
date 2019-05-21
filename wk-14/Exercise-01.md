@@ -25,5 +25,14 @@
     ```
         and the primary key of `owner id` and `animal id`.
         
-2) Insert the following data into the two tables:
+        
+2)  Update the owner_animals table to include the two fields:
+        ```text
+            Field       Type    Size    Other
+            created_at  DATETIME        default CURRENT TIMESTAMP
+            updated_at  DATETIME        default CURRENT TIMESTAMP
+                                        on update CURRENT TIMESTAMP
+                                        ```               
+
+) Insert the following data into the two tables:
         
